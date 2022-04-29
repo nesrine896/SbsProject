@@ -3,15 +3,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:frontend/Screens/Login_Screen.dart';
+import 'package:frontend/Screens/LoginNewdesign.dart';
 import 'package:frontend/constants/constants.dart';
-import '../components/Round_Boutton.dart';
+import '../widgets/round_Boutton.dart';
 import '../widgets/slideitem.dart';
 import '../widgets/slidedots.dart';
 import 'package:frontend/widgets/slidedots.dart';
 
 import '../models/slide.dart';
-import '../screens/Sign_Screen.dart';
 
 class GettingStartedScreen extends StatefulWidget {
   @override
@@ -25,7 +24,7 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
   @override
   void initState() {
     super.initState();
-    Timer.periodic(Duration(seconds: 5), (Timer timer) {
+    Timer.periodic(Duration(seconds: 10), (Timer timer) {
       if (_currentPage < 2) {
         _currentPage++;
       } else {
@@ -97,7 +96,7 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 5,
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -107,17 +106,17 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
                 color: KPrimaryColor,
                 textColor: Colors.white,
                 press: () {
-                  Navigator.of(context).pushNamed(LoginScreen.routeName);
+                  Navigator.of(context).pushNamed(LoginPage.routName);
                 }),
-            FlatButton(
-              child: Text(
-                'Have an account?',
-                style: TextStyle(fontSize: 18),
-              ),
-              onPressed: () {
-                Navigator.of(context).pushNamed(SignupScreen.routeName);
-              },
-            ),
+            // FlatButton(
+            //   child: Text(
+            //     'Have an account?',
+            //     style: TextStyle(fontSize: 18),
+            //   ),
+            //   onPressed: () {
+            //     // Navigator.of(context).pushNamed(SignIn.routName);
+            //   },
+            // ),
           ],
         )
       ],

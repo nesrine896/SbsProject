@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/Screens/getting_start.dart';
-import 'package:frontend/Screens/components/background.dart';
-import 'package:frontend/components/Round_Boutton.dart';
+import './background.dart';
+import 'package:frontend/widgets/round_Boutton.dart';
 import 'package:frontend/constants/constants.dart';
 
 class Body extends StatelessWidget {
